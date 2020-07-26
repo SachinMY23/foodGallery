@@ -1,0 +1,21 @@
+<div class="container">
+<p class="title">Food Gallery</p>
+<h1 class="heading">Choose your food here</h1>
+</div>
+  <div class="container food" *ngIf='allPhotos'>
+  <div class="row" >
+      <div class="col-md-4" *ngFor="let photo of allPhotos">
+      <a [routerLink]="['/review']" [queryParams]="{id:photo.id,secret:photo.secret,farm:photo.farm,server:photo.server}" ><img style="width:300px;height:300px;margin: 15px;" src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"></a>
+  </div>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" *ngIf='pageNo!=1' (click)="goToPreviousPage()">Previous</a></li>
+      <li class="page-item"><a class="page-link" (click)="goToPage1()">1</a></li>
+      <li class="page-item"><a class="page-link" (click)="goToPage2()">2</a></li>
+      <li class="page-item"><a class="page-link" (click)="goToPage3()">3</a></li>
+      <li class="page-item"><a class="page-link" (click)="goToNextPage()">Next</a></li>
+    </ul>
+  </nav>
+  </div>
+  

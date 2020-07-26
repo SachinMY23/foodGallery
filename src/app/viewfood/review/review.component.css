@@ -1,0 +1,32 @@
+.heading{
+    color:blue;
+    font-style: italic;
+    font-size: x-large;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-left: 421px;
+    margin-bottom: 30px;
+}
+.food{
+    background-color: chocolate;
+}
+
+.title{
+    color:orangered;
+    background-color: palegreen;
+    font-weight:800;
+    font-style: normal;
+    padding-left: 221px;
+    font-size:80px;
+    margin-top:20px;
+}
+
+.top{
+    margin-top: 20px;
+}
+
+.texthead{
+    color:red;
+    font-weight:800;
+    font-style: oblique;
+}
