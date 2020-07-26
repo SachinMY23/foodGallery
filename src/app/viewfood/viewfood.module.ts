@@ -4,15 +4,18 @@ import { AllfoodComponent } from './allfood/allfood.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReviewComponent } from './review/review.component';
+import { FoodpageComponent } from './foodpage/foodpage.component';
 
 
 @NgModule({
-  declarations: [AllfoodComponent, ReviewComponent],
+  declarations: [AllfoodComponent, ReviewComponent, FoodpageComponent],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule.forChild([
-      {path:'review',component:ReviewComponent}
+      {path:'review',component:ReviewComponent},
+      {path:'foodview',component:FoodpageComponent}
+
     ])
   ]
 })

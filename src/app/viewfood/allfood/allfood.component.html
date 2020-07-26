@@ -5,7 +5,10 @@
   <div class="container food" *ngIf='allPhotos'>
   <div class="row" >
       <div class="col-md-4" *ngFor="let photo of allPhotos">
-      <a [routerLink]="['/review']" [queryParams]="{id:photo.id,secret:photo.secret,farm:photo.farm,server:photo.server}" ><img style="width:300px;height:300px;margin: 15px;" src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"></a>
+      <a [routerLink]="['/review']" [queryParams]="{id:photo.id,secret:photo.secret,farm:photo.farm,server:photo.server,page:pageNo,title:photo.title}" ><img style="width:300px;height:300px;margin: 15px;" src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"></a>
+      <div style="margin-left:15px;color:whitesmoke" *ngIf="id===photo.id"> Rating: {{rating}}</div>
+      <div style="margin-left:15px;color:whitesmoke" *ngIf="id!==photo.id"> Rating: Not available</div>
+
   </div>
   </div>
   <nav aria-label="Page navigation example">
@@ -14,7 +17,7 @@
       <li class="page-item"><a class="page-link" (click)="goToPage1()">1</a></li>
       <li class="page-item"><a class="page-link" (click)="goToPage2()">2</a></li>
       <li class="page-item"><a class="page-link" (click)="goToPage3()">3</a></li>
-      <li class="page-item"><a class="page-link" (click)="goToNextPage()">Next</a></li>
+      <li class="page-item"><a class="page-link" (click)="goToNextPage()" *ngIf="nextButton===true">Next</a></li>
     </ul>
   </nav>
   </div>

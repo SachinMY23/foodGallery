@@ -7,7 +7,7 @@ import {Observable} from 'rxjs'
 export class AppService {
 
 
-  public url='https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=a61ce8b01dae2ba9218c6f661796f478&text=dessert&format=json&nojsoncallback=1&tags=foods,breakfast,lunch,dinner,dessert&per_page=30';
+  public url='https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=a61ce8b01dae2ba9218c6f661796f478&text=foodimages&format=json&nojsoncallback=1&tags=brealfast,lunch,dinner,dessert,pizza,veg,nonveg,seafood&per_page=30';
   constructor(public http:HttpClient) { }
 
 
