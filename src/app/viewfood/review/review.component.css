@@ -12,13 +12,15 @@
 }
 
 .title{
-    color:orangered;
-    background-color: palegreen;
-    font-weight:800;
     font-style: normal;
-    padding-left: 221px;
-    font-size:80px;
-    margin-top:20px;
+    margin-left: 221px;
+   
+}
+.image{
+    width:580px;
+    height:300px;
+    margin-top: 15px;
+    margin-left: 321px;
 }
 
 .top{
@@ -26,7 +28,21 @@
 }
 
 .texthead{
-    color:red;
+    color:whitesmoke;
     font-weight:800;
     font-style: oblique;
 }
+@media only screen and (max-width:576px) {
+    .heading {
+      margin-left: 130px;
+    }
+    .image{
+      width:480px;
+      height:300px;
+      margin: 15px;
+    }
+    .title{
+        margin-left:20px;
+        font-size: 20px;
+    }
+  }

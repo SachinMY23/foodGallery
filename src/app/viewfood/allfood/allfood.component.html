@@ -4,8 +4,8 @@
 </div>
   <div class="container food" *ngIf='allPhotos'>
   <div class="row" >
-      <div class="col-md-4" *ngFor="let photo of allPhotos">
-      <a [routerLink]="['/review']" [queryParams]="{id:photo.id,secret:photo.secret,farm:photo.farm,server:photo.server,page:pageNo,title:photo.title}" ><img style="width:300px;height:300px;margin: 15px;" src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"></a>
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4" *ngFor="let photo of allPhotos">
+      <a [routerLink]="['/review']" [queryParams]="{id:photo.id,secret:photo.secret,farm:photo.farm,server:photo.server,page:pageNo,title:photo.title}" ><img class="image" src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"></a>
       <div style="margin-left:15px;color:whitesmoke" *ngIf="id===photo.id"> Rating: {{rating}}</div>
       <div style="margin-left:15px;color:whitesmoke" *ngIf="id!==photo.id"> Rating: Not available</div>
 
